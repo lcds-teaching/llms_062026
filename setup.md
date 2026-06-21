@@ -233,16 +233,16 @@ Then select the same Python/Jupyter environment for the notebook.
 Lab Four uses these Ollama model tags and pulls missing models by default from inside the notebook:
 
 ```bash
-ollama pull smollm2:360m
-ollama pull qwen3:0.6b
-ollama pull llama3.2:1b
+ollama pull smollm2:135m
+ollama pull gemma3:270m
+ollama pull qwen2.5:0.5b
 ```
 
 Approximate download sizes used in the lab notebook:
 
-- `smollm2:360m`: about 0.7 GB;
-- `qwen3:0.6b`: about 0.5 GB;
-- `llama3.2:1b`: about 1.3 GB.
+- `smollm2:135m`: about 0.3 GB;
+- `gemma3:270m`: about 0.3 GB;
+- `qwen2.5:0.5b`: about 0.4 GB.
 
 The notebook can pull these for you. It also smoke-tests each pulled model before the comparison section and skips a candidate if its local runner crashes. The commands above are useful if you want to prepare them before class.
 
@@ -251,7 +251,7 @@ The notebook can pull these for you. It also smoke-tests each pulled model befor
 After the model downloads, run:
 
 ```bash
-ollama run smollm2:360m
+ollama run smollm2:135m
 ```
 
 Paste a tiny synthetic prompt, for example:
@@ -298,7 +298,7 @@ If you prefer a graphical application, you can use [LM Studio](https://lmstudio.
 ### Local Model Troubleshooting
 
 - **`ollama` command not found:** on Linux, rerun the setup cells and check the automatic install output; on macOS or Windows, reinstall/open Ollama and restart VS Code/Jupyter.
-- **Model not found:** run `ollama pull smollm2:360m` and check the model tag spelling.
+- **Model not found:** run `ollama pull smollm2:135m` and check the model tag spelling.
 - **Connection refused:** Ollama is not running, or the local server is not available.
 - **Laptop becomes slow:** stop the model, use a smaller model, and avoid long prompts.
 - **Not enough disk space:** remove unused local models or free enough space before running Lab Four.
@@ -324,7 +324,7 @@ ollama --version
 ollama list
 ```
 
-`ollama list` should show any models you have downloaded, such as `smollm2:360m`. If the list is empty, the Lab Four setup cell should pull the required models when you run it.
+`ollama list` should show any models you have downloaded, such as `smollm2:135m`. If the list is empty, the Lab Four setup cell should pull the required models when you run it.
 
 ### Optional Quick Coding Test
 

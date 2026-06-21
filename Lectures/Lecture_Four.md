@@ -39,9 +39,9 @@ http://localhost:11434/api
 
 For a modest laptop, the model choice matters more than the API shape. Start with a very small model and accept that it may be less capable. Good classroom candidates are:
 
-- `smollm2:360m`, around hundreds of MB, useful for proving the local workflow;
-- `qwen3:0.6b`, also small enough for many laptops;
-- `llama3.2:1b`, larger but still realistic for many machines.
+- `smollm2:135m`, around a few hundred MB, useful for proving the local workflow;
+- `gemma3:270m`, another ultra-small candidate for low-memory laptops;
+- `qwen2.5:0.5b`, larger than the ultra-small candidates but still modest.
 
 The teaching point is not that these are the best models. The teaching point is that local models have to fit the machine, the task, and the session time.
 
@@ -51,8 +51,8 @@ The usual beginner workflow is:
 
 ```bash
 ollama --version
-ollama pull smollm2:360m
-ollama run smollm2:360m
+ollama pull smollm2:135m
+ollama run smollm2:135m
 ollama list
 ```
 
@@ -60,7 +60,7 @@ If the local server is running, a small local API test can use:
 
 ```bash
 curl http://localhost:11434/api/chat -d '{
-  "model": "smollm2:360m",
+  "model": "smollm2:135m",
   "messages": [
     {"role": "user", "content": "Classify this public comment: the bus was cancelled and I missed my clinic appointment."}
   ],
