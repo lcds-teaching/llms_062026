@@ -84,13 +84,12 @@ If a later optional exercise asks you to download data or call a model, it will 
 
 ## API Keys and Local Models
 
-You do not need API keys for the core labs.
+Most early labs do not need API keys. Two later labs use real model calls:
 
-- Lab Three explains remote APIs, but live calls are optional.
-- Lab Four explains local models, but live local calls are disabled by default.
-- The notebooks use mock responses unless you deliberately enable live calls.
+- Lab Three uses a remote API. You can use either OpenAI or Gemini; complete `api_setup.md` before running it.
+- Lab Four uses local models through Ollama and pulls small model weights from inside the notebook.
 
-Do not paste API keys into notebooks.
+Do not paste API keys into notebooks, code files, chat messages, screenshots, or shared documents.
 
 ## How to Use Solutions
 

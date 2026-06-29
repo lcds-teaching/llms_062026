@@ -4,7 +4,7 @@
 
 Please complete this setup before the first day of class. The required tools are **Git**, **Anaconda Python**, and **VS Code**.
 
-Lab Four compares and tunes locally hosted language models. It now requires Ollama and locally downloaded model weights. The notebook checks for Ollama and pulls the required models by default.
+Lab Three uses a remote model API and can run with either OpenAI or Gemini credentials; see `api_setup.md`. Lab Four compares and tunes locally hosted language models. It now requires Ollama and locally downloaded model weights. The notebook checks for Ollama and pulls the required models by default.
 
 ## Before You Start
 
